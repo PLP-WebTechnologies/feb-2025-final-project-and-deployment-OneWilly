@@ -24,3 +24,10 @@ const themeToggle = {
 
 // Initialize
 themeToggle.init();
+
+const nav = document.querySelector('.main-header nav');
+const hamburger = document.querySelector('.main-header .hamburger');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('responsive');
+});
