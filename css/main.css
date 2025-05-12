@@ -1,26 +1,26 @@
-/* main.css - Consolidated Styles for TechInsight */
+/* main.css – Full Consolidated Styles for TechInsight */
 
-/* ===== Simple Reset ===== */
-*, *::before, *::after {
+/* ===== 1. Simple Reset ===== */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Theme Variables ===== */
+/* ===== 2. Theme Variables ===== */
 :root {
   --primary-color: #2A2A72;
   --secondary-color: #00C9A7;
   --text-color: #333;
   --bg-color: #f8f9fa;
-  --dark-text: #e6e6e6;
-  --dark-bg: #1a1a2e;
   --transition: all 0.3s ease;
   --max-width: 1200px;
   --gap: 1rem;
 }
 
-/* ===== Base Styles (Mobile-First) ===== */
+/* ===== 3. Base Styles (Mobile-First) ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
@@ -50,7 +50,7 @@ a:hover {
   margin: 0 auto;
 }
 
-/* ===== Header & Navbar ===== */
+/* ===== 4. Header & Navbar ===== */
 .main-header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -59,14 +59,12 @@ a:hover {
   top: 0;
   z-index: 1000;
 }
-
 .main-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--gap) 0;
 }
-
 .main-header .logo h1 {
   font-size: 1.8rem;
 }
@@ -84,14 +82,13 @@ a:hover {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: var(--text-color);
-  transition: var(--transition);
 }
 .main-header nav ul li a:hover,
 .main-header nav ul li a.active {
   color: var(--primary-color);
 }
 
-/* Hamburger menu (hidden by default) */
+/* Hamburger icon (hidden by default) */
 .main-header .hamburger {
   display: none;
   flex-direction: column;
@@ -99,13 +96,13 @@ a:hover {
   gap: 5px;
 }
 .main-header .hamburger .bar {
-  height: 3px;
   width: 25px;
+  height: 3px;
   background-color: var(--text-color);
   transition: var(--transition);
 }
 
-/* ===== Hero ===== */
+/* ===== 5. Hero Section ===== */
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
@@ -133,14 +130,13 @@ a:hover {
   background: var(--primary-color);
 }
 
-/* ===== Article Grid & Cards ===== */
+/* ===== 6. Article Grid & Cards ===== */
 .article-grid {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   margin: var(--gap) 0;
 }
-
 .article-card {
   background: #fff;
   border-radius: 10px;
@@ -152,12 +148,10 @@ a:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-
 .article-card img {
   width: 100%;
   display: block;
 }
-
 .article-content {
   padding: var(--gap);
 }
@@ -169,10 +163,10 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
-.cyber { background: var(--primary-color); color: #fff; }
-.ai { background: #FF6B6B; color: #fff; }
-.fullstack { background: var(--secondary-color); color: #fff; }
-
+.cyber       { background: var(--primary-color); }
+.ai          { background: #FF6B6B; }
+.fullstack   { background: var(--secondary-color); }
+.category-tag { color: #fff; }
 .article-content h3 {
   margin: 0.5rem 0;
 }
@@ -183,7 +177,7 @@ a:hover {
   font-weight: bold;
 }
 
-/* ===== Responsive Overrides ===== */
+/* ===== 7. Responsive Overrides ===== */
 
 /* ≥600px: two-column grid */
 @media screen and (min-width: 600px) {
@@ -203,7 +197,7 @@ a:hover {
   }
 }
 
-/* ≤600px: hamburger menu */
+/* ≤600px: hamburger menu + mobile nav */
 @media screen and (max-width: 600px) {
   .main-header nav ul {
     display: none;
@@ -225,19 +219,3 @@ a:hover {
     padding: 1rem;
   }
 }
-
-.main-header nav ul { … }
-.main-header .hamburger { … }
-@media (max-width: 600px) {
-  .main-header nav ul { display: none; }
-  .main-header nav.responsive ul { display: flex; }
-  .main-header .hamburger { display: flex; }
-}
-
-.article-grid { display: flex; flex-direction: column; gap: var(--gap); }
-.article-card { /* styling & base */ }
-@media (min-width: 600px) {
-  .article-grid { flex-direction: row; flex-wrap: wrap; }
-  .article-card { flex: 1 1 calc(50% - var(--gap)); }
-}
-/* etc… */
