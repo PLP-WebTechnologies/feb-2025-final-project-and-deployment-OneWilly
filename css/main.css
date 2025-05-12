@@ -29,6 +29,32 @@ body {
   transition: var(--transition);
 }
 
+/* Animated gradient background */
+body {
+  /* Fallback static color */
+  background: #2A2A72;
+
+  /* Animated gradient */
+  background: linear-gradient(-45deg,
+    #2A2A72,
+    #00C9A7,
+    #FF6B6B,
+    #1a1a2e
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Define the keyframes for smooth transitions */
+@keyframes gradientAnimation {
+  0%   { background-position: 0%   50%; }
+  25%  { background-position: 50%  100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50%  0%; }
+  100% { background-position: 0%   50%; }
+}
+
+
 img {
   max-width: 100%;
   height: auto;
