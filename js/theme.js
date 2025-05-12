@@ -59,3 +59,8 @@ hamburger.addEventListener('click', () => {
 
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => themeToggle.init());
+// In themeToggle.init(), after loadTheme():
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (prefersReduced) {
+  document.body.style.animation = 'none';
+}
