@@ -1,9 +1,11 @@
-// theme.js – Theme & Nav Interactivity
+// js/main.js – Site Interactivity for TechInsight
 
+// Theme Toggle Module
 const themeToggle = {
   init() {
     this.loadTheme();
     this.updateThemeIcon(document.body.classList.contains('dark-theme'));
+
     document
       .getElementById('theme-button')
       .addEventListener('click', () => this.toggleTheme());
@@ -15,8 +17,13 @@ const themeToggle = {
       }
     });
 
-    // Setup contact form validation (stubbed for next step)
+    // Setup contact form validation
     setupContactValidation();
+
+    // Respect reduced motion setting
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.body.style.animation = 'none';
+    }
   },
 
   loadTheme() {
@@ -37,7 +44,7 @@ const themeToggle = {
   }
 };
 
-// Contact form validation (to be expanded next)
+// Contact Form Validation Stub
 function setupContactValidation() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -50,17 +57,30 @@ function setupContactValidation() {
   });
 }
 
-// Navbar hamburger toggle
-const nav = document.querySelector('.main-header nav');
-const hamburger = document.querySelector('.main-header .hamburger');
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('responsive');
-});
+// DOM Ready
+document.addEventListener('DOMContentLoaded', () => {
+  themeToggle.init();
 
-// Initialize everything
-document.addEventListener('DOMContentLoaded', () => themeToggle.init());
-// In themeToggle.init(), after loadTheme():
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (prefersReduced) {
-  document.body.style.animation = 'none';
-}
+  const nav = document.querySelector('.main-header nav');
+  const hamburger = document.querySelector('.main-header .hamburger');
+
+  // Hamburger menu toggle
+  hamburger.addEventListener('click', () => {
+    const expanded = nav.classList.toggle('responsive');
+    // Update aria-expanded on both nav and button for accessibility
+    nav.setAttribute('aria-expanded', expanded);
+    hamburger.setAttribute('aria-expanded', expanded);
+  });
+
+  // Mobile submenu toggle for "Articles"
+  document.querySelectorAll('.nav li.dropdown > a').forEach(link => {
+    link.addEventListener('click', e => {
+      // Only intercept clicks when mobile menu is open
+      if (!nav.classList.contains('responsive')) return;
+      e.preventDefault();
+      const submenu = link.nextElementSibling;
+      const isOpen = submenu.classList.toggle('open');
+      link.setAttribute('aria-expanded', isOpen);
+    });
+  });
+});

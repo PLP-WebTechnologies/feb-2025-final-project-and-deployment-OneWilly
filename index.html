@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechInsight | Cybersecurity & AI Blog</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>TechInsight | Cybersecurity &amp; AI Blog</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script
+    src="https://kit.fontawesome.com/your-kit-code.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
 <body>
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <button id="theme-button"><i class="fas fa-moon"></i></button>
+  <!-- Theme Toggle -->
+  <button
+    id="theme-button"
+    class="theme-toggle"
+    aria-label="Toggle dark/light theme"
+  >
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <h1>Tech<span>Insight</span></h1>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <!-- Articles dropdown -->
+          <li class="dropdown">
+            <a href="articles.html" aria-haspopup="true" aria-expanded="false">
+              Articles <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html">AI</a></li>
+              <li><a href="fullstack.html">Full-Stack</a></li>
+            </ul>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
     </div>
+  </header>
 
-    <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Tech<span>Insight</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Securing the Digital Future</h2>
+      <p>
+        Explore expert insights and best practices in Cybersecurity, Artificial
+        Intelligence, and Full-Stack Development to stay ahead in today’s tech
+        landscape.
+      </p>
+      <a href="articles.html" class="btn">Explore Articles</a>
+    </div>
+  </section>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('images/hero-bg.jpg')">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Securing the Digital Future</h2>
-                <p>Expert insights on Cybersecurity, AI, and Full-Stack Development</p>
-                <a href="articles.html" class="btn">Explore Articles</a>
-            </div>
-        </div>
+  <!-- Featured Articles -->
+  <main class="container">
+    <section class="featured-articles">
+      <h2>Latest in Cybersecurity</h2>
+      <div class="article-grid">
+        <!-- Article cards… -->
+      </div>
     </section>
+  </main>
 
-    <!-- Featured Articles Section -->
-    <main class="container">
-        <section class="featured-articles">
-            <h2>Latest in Cybersecurity</h2>
-            <div class="article-grid">
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <img src="images/article-cyber.jpg" alt="Zero Trust Architecture">
-                    <div class="article-content">
-                        <span class="category-tag cyber">Cybersecurity</span>
-                        <h3>Implementing Zero Trust Architecture</h3>
-                        <p>Modern approaches to network security in cloud environments...</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                <!-- Add more articles following same structure -->
-            </div>
-        </section>
-    </main>
-
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

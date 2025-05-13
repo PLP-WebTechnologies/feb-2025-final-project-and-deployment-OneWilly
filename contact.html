@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact – Tech Insight</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Contact – TechInsight</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script
+    src="https://kit.fontawesome.com/your-kit-code.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
 <body>
- <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Tech<span>Insight</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+  <!-- Theme Toggle -->
+  <button
+    id="theme-button"
+    class="theme-toggle"
+    aria-label="Toggle dark/light theme"
+  >
+    <i class="fas fa-moon"></i>
+  </button>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-      <main>
-    <h1>Contact Me</h1>
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <h1>Tech<span>Insight</span></h1>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+          <!-- Articles dropdown -->
+          <li class="dropdown">
+            <a href="articles.html" aria-haspopup="true" aria-expanded="false">
+              Articles <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html">AI</a></li>
+              <li><a href="fullstack.html">Full-Stack</a></li>
+            </ul>
+          </li>
 
-      <button type="submit">Send</button>
-    </form>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <main class="container">
+    <section class="contact-section">
+      <h1>Contact Me</h1>
+      <form id="contact-form" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your message..."
+          required
+        ></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
   </main>
+
+  <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

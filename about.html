@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About – Tech Insight</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>About – TechInsight</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script
+    src="https://kit.fontawesome.com/your-kit-code.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
 <body>
-   <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Tech<span>Insight</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cybersecurity.html" class="active">CyberSecurity</a></li>
-                    <li><a href="ai.html">AI/ML</a></li>
-                    <li><a href="fullstack.html">Full Stack</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-  <main>
-    <h1>About Tech Insight</h1>
-    <p>Welcome to Tech Insight, your go-to blog for AI, Cybersecurity, and Full-Stack development. Built with HTML5, CSS3, and JavaScript, this site showcases responsive design and interactive features.</p>
-    <h2>Author</h2>
-    <p>William Oneka — Web Developer & Tech Enthusiast</p>
+  <!-- Theme Toggle -->
+  <button
+    id="theme-button"
+    class="theme-toggle"
+    aria-label="Toggle dark/light theme"
+  >
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <h1>Tech<span>Insight</span></h1>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <!-- Articles dropdown -->
+          <li class="dropdown">
+            <a href="articles.html" aria-haspopup="true" aria-expanded="false">
+              Articles <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html">AI</a></li>
+              <li><a href="fullstack.html">Full-Stack</a></li>
+            </ul>
+          </li>
+
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="about-section">
+      <h1>About TechInsight</h1>
+      <p>
+        Welcome to TechInsight, your go-to blog for AI, Cybersecurity, and Full-Stack
+        Development. Our mission is to bring you the latest industry insights,
+        tutorials, and best practices to help you stay ahead in today’s rapidly
+        evolving tech landscape.
+      </p>
+
+      <h2>Author</h2>
+      <p>
+        William Oneka — Web Developer &amp; Tech Enthusiast. With a passion for
+        building scalable web applications and exploring emerging technologies,
+        William wrote TechInsight to share knowledge and foster community.
+      </p>
+    </section>
   </main>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

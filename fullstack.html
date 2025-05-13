@@ -1,77 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Development | TechBlog</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Full-Stack Engineering – TechInsight</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script
+    src="https://kit.fontawesome.com/your-kit-code.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
 <body>
+  <!-- Theme Toggle -->
+  <button
+    id="theme-button"
+    class="theme-toggle"
+    aria-label="Toggle dark/light theme"
+  >
+    <i class="fas fa-moon"></i>
+  </button>
+
   <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Tech<span>Insight</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cybersecurity.html" class="active">CyberSecurity</a></li>
-                    <li><a href="ai.html">AI/ML</a></li>
-                    <li><a href="fullstack.html">Full Stack</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <h1>Tech<span>Insight</span></h1>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <!-- Articles dropdown -->
+          <li class="dropdown">
+            <a href="articles.html" aria-haspopup="true" aria-expanded="false">
+              Articles <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html">AI</a></li>
+              <li><a href="fullstack.html" class="active">Full-Stack</a></li>
+            </ul>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Category Hero -->
+  <section class="hero category-hero">
+    <div class="container hero-content">
+      <h2>Full-Stack Engineering</h2>
+      <p>Building scalable end-to-end solutions</p>
+    </div>
+  </section>
+
+  <!-- Full-Stack Articles -->
+  <main class="container">
+    <section class="article-grid">
+      <article class="article-card" data-category="architecture">
+        <img
+          src="images/microservices.webp"
+          alt="Diagram of microservices architecture"
+          loading="lazy"
+        />
+        <div class="article-content">
+          <span class="category-tag fullstack">Architecture</span>
+          <h3>Microservices Communication Patterns</h3>
+          <div class="article-meta">
+            <span><i class="fas fa-calendar-alt"></i> March 20, 2025</span>
+            <span><i class="fas fa-clock"></i> 11 min read</span>
+          </div>
+          <p>
+            Explore patterns such as gRPC, message queues, and HTTP APIs to
+            enable reliable, scalable communication between microservices.
+          </p>
+          <a href="#" class="read-more"
+            >Read Full Article <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
-    </header>
-    <main class="container">
-        <section class="category-hero">
-            <h1>Full Stack Engineering</h1>
-            <p>Building scalable end-to-end solutions</p>
-        </section>
+      </article>
 
-        <section class="articles-grid">
-            <!-- Article 1 -->
-            <article class="article-card" data-category="architecture">
-                <div class="article-image">
-                    <img src="images/microservices.webp" alt="Microservices diagram" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <span class="article-tag">Architecture</span>
-                    <h2>Microservices Communication Patterns</h2>
-                    <div class="article-meta">
-                        <span><i class="fas fa-calendar-alt"></i> March 20, 2025</span>
-                        <span><i class="fas fa-clock"></i> 11 min read</span>
-                    </div>
-                    <p>Implementing gRPC and API gateways in distributed systems...</p>
-                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
+      <article class="article-card" data-category="devops">
+        <img
+          src="images/ci-cd.webp"
+          alt="Diagram of CI/CD pipeline"
+          loading="lazy"
+        />
+        <div class="article-content">
+          <span class="category-tag fullstack">DevOps</span>
+          <h3>Automated Deployment Strategies</h3>
+          <div class="article-meta">
+            <span><i class="fas fa-calendar-alt"></i> March 19, 2025</span>
+            <span><i class="fas fa-clock"></i> 7 min read</span>
+          </div>
+          <p>
+            Implement robust CI/CD pipelines using GitHub Actions, Docker, and
+            Kubernetes to streamline testing and deployment.
+          </p>
+          <a href="#" class="read-more"
+            >Read Full Article <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </article>
+    </section>
+  </main>
 
-            <!-- Article 2 -->
-            <article class="article-card" data-category="devops">
-                <div class="article-image">
-                    <img src="images/ci-cd.webp" alt="CI/CD pipeline" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <span class="article-tag">DevOps</span>
-                    <h2>Automated Deployment Strategies</h2>
-                    <div class="article-meta">
-                        <span><i class="fas fa-calendar-alt"></i> March 19, 2025</span>
-                        <span><i class="fas fa-clock"></i> 7 min read</span>
-                    </div>
-                    <p>GitHub Actions workflows for CI/CD pipelines...</p>
-                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <!-- Reuse footer structure -->
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,77 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Machine Learning | TechBlog</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>AI &amp; Machine Learning – TechInsight</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script
+    src="https://kit.fontawesome.com/your-kit-code.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
 <body>
+  <!-- Theme Toggle -->
+  <button
+    id="theme-button"
+    class="theme-toggle"
+    aria-label="Toggle dark/light theme"
+  >
+    <i class="fas fa-moon"></i>
+  </button>
+
   <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <h1>Tech<span>Insight</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cybersecurity.html" class="active">CyberSecurity</a></li>
-                    <li><a href="ai.html">AI/ML</a></li>
-                    <li><a href="fullstack.html">Full Stack</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <h1>Tech<span>Insight</span></h1>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <!-- Articles dropdown -->
+          <li class="dropdown">
+            <a href="articles.html" aria-haspopup="true" aria-expanded="false">
+              Articles <i class="fas fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html" class="active">AI</a></li>
+              <li><a href="fullstack.html">Full-Stack</a></li>
+            </ul>
+          </li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Category Hero -->
+  <section class="hero category-hero">
+    <div class="container hero-content">
+      <h2>Artificial Intelligence</h2>
+      <p>Exploring the frontier of machine intelligence</p>
+    </div>
+  </section>
+
+  <!-- AI Articles Grid -->
+  <main class="container">
+    <section class="article-grid">
+      <article class="article-card" data-category="ml-ops">
+        <img
+          src="images/mlops-pipeline.webp"
+          alt="Diagram of MLOps workflow"
+          loading="lazy"
+        />
+        <div class="article-content">
+          <span class="category-tag ai">MLOps</span>
+          <h3>Productionizing Machine Learning Models</h3>
+          <div class="article-meta">
+            <span><i class="fas fa-calendar-alt"></i> March 18, 2025</span>
+            <span><i class="fas fa-clock"></i> 12 min read</span>
+          </div>
+          <p>
+            Learn how to build an end-to-end MLOps pipeline with Kubernetes,
+            Kubeflow, and TensorFlow Extended (TFX) to automate training,
+            validation, and deployment of ML models at scale.
+          </p>
+          <a href="#" class="read-more"
+            >Read Full Article <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
-    </header>
-    <main class="container">
-        <section class="category-hero">
-            <h1>Artificial Intelligence</h1>
-            <p>Exploring the frontier of machine intelligence</p>
-        </section>
+      </article>
 
-        <section class="articles-grid">
-            <!-- Article 1 -->
-            <article class="article-card" data-category="ml-ops">
-                <div class="article-image">
-                    <img src="images/mlops-pipeline.webp" alt="MLOps workflow" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <span class="article-tag">MLOps</span>
-                    <h2>Productionizing Machine Learning Models</h2>
-                    <div class="article-meta">
-                        <span><i class="fas fa-calendar-alt"></i> March 18, 2025</span>
-                        <span><i class="fas fa-clock"></i> 12 min read</span>
-                    </div>
-                    <p>End-to-end pipeline management with Kubernetes and TFX...</p>
-                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
+      <article class="article-card" data-category="computer-vision">
+        <img
+          src="images/computer-vision.webp"
+          alt="Camera detecting objects in real time"
+          loading="lazy"
+        />
+        <div class="article-content">
+          <span class="category-tag ai">Computer Vision</span>
+          <h3>Real-Time Object Detection Systems</h3>
+          <div class="article-meta">
+            <span><i class="fas fa-calendar-alt"></i> March 16, 2025</span>
+            <span><i class="fas fa-clock"></i> 9 min read</span>
+          </div>
+          <p>
+            Implement YOLOv7 with TensorFlow Lite on edge devices for
+            fast, real-time object detection. Explore model optimization and
+            deployment strategies.
+          </p>
+          <a href="#" class="read-more"
+            >Read Full Article <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </article>
+    </section>
+  </main>
 
-            <!-- Article 2 -->
-            <article class="article-card" data-category="computer-vision">
-                <div class="article-image">
-                    <img src="images/computer-vision.webp" alt="Computer vision applications" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <span class="article-tag">Computer Vision</span>
-                    <h2>Real-Time Object Detection Systems</h2>
-                    <div class="article-meta">
-                        <span><i class="fas fa-calendar-alt"></i> March 16, 2025</span>
-                        <span><i class="fas fa-clock"></i> 9 min read</span>
-                    </div>
-                    <p>Implementing YOLOv7 with TensorFlow Lite for edge devices...</p>
-                    <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <!-- Reuse footer structure -->
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
