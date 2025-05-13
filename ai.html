@@ -2,25 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore cutting-edge artificial intelligence articles covering machine learning, deep learning, NLP, computer vision, and AI ethics from industry experts." />
   <title>AI &amp; Machine Learning – TechInsight</title>
   <link rel="stylesheet" href="css/main.css" />
-  <script
-    src="https://kit.fontawesome.com/your-kit-code.js"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 
 <body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Theme Toggle -->
-  <button
-    id="theme-button"
-    class="theme-toggle"
-    aria-label="Toggle dark/light theme"
-  >
+  <button id="theme-button" class="theme-toggle" aria-label="Toggle dark/light theme">
     <i class="fas fa-moon"></i>
   </button>
 
@@ -28,7 +23,9 @@
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <h1>Tech<span>Insight</span></h1>
+        <a href="index.html" aria-label="TechInsight Homepage">
+          <h1>Tech<span>Insight</span></h1>
+        </a>
       </div>
 
       <nav class="nav" aria-label="Main navigation">
@@ -51,11 +48,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <button
-          class="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -65,67 +58,438 @@
   </header>
 
   <!-- Category Hero -->
-  <section class="hero category-hero">
+  <section class="hero category-hero ai-hero">
     <div class="container hero-content">
-      <h2>Artificial Intelligence</h2>
-      <p>Exploring the frontier of machine intelligence</p>
+      <h1>Artificial Intelligence</h1>
+      <p>Exploring the frontier of machine intelligence and its real-world applications</p>
+      <div class="category-nav">
+        <nav aria-label="Category navigation">
+          <ul>
+            <li><a href="#machine-learning">Machine Learning</a></li>
+            <li><a href="#deep-learning">Deep Learning</a></li>
+            <li><a href="#nlp">Natural Language Processing</a></li>
+            <li><a href="#computer-vision">Computer Vision</a></li>
+            <li><a href="#ai-ethics">AI Ethics</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </section>
 
-  <!-- AI Articles Grid -->
-  <main class="container">
-    <section class="article-grid">
-      <article class="article-card" data-category="ml-ops">
-        <img
-          src="images/mlops-pipeline.webp"
-          alt="Diagram of MLOps workflow"
-          loading="lazy"
-        />
-        <div class="article-content">
-          <span class="category-tag ai">MLOps</span>
-          <h3>Productionizing Machine Learning Models</h3>
-          <div class="article-meta">
-            <span><i class="fas fa-calendar-alt"></i> March 18, 2025</span>
-            <span><i class="fas fa-clock"></i> 12 min read</span>
-          </div>
-          <p>
-            Learn how to build an end-to-end MLOps pipeline with Kubernetes,
-            Kubeflow, and TensorFlow Extended (TFX) to automate training,
-            validation, and deployment of ML models at scale.
-          </p>
-          <a href="#" class="read-more"
-            >Read Full Article <i class="fas fa-arrow-right"></i
-          ></a>
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <!-- Featured Article -->
+    <section class="featured-article">
+      <article class="featured-card">
+        <div class="featured-image">
+          <img src="images/llm-architecture.webp" alt="Large Language Model Architecture Diagram" loading="lazy" />
+          <span class="featured-badge">Featured</span>
         </div>
-      </article>
-
-      <article class="article-card" data-category="computer-vision">
-        <img
-          src="images/computer-vision.webp"
-          alt="Camera detecting objects in real time"
-          loading="lazy"
-        />
-        <div class="article-content">
-          <span class="category-tag ai">Computer Vision</span>
-          <h3>Real-Time Object Detection Systems</h3>
+        <div class="featured-content">
+          <span class="category-tag ai">Deep Learning</span>
+          <h2>Understanding Transformer Architecture: The Foundation of Modern AI</h2>
           <div class="article-meta">
-            <span><i class="fas fa-calendar-alt"></i> March 16, 2025</span>
-            <span><i class="fas fa-clock"></i> 9 min read</span>
+            <span><i class="fas fa-user"></i> Sarah Chen, PhD</span>
+            <span><i class="fas fa-calendar-alt"></i> May 11, 2025</span>
+            <span><i class="fas fa-clock"></i> 18 min read</span>
           </div>
           <p>
-            Implement YOLOv7 with TensorFlow Lite on edge devices for
-            fast, real-time object detection. Explore model optimization and
-            deployment strategies.
+            This comprehensive guide breaks down the transformer architecture that powers today's most advanced language and vision models. Learn how attention mechanisms, positional encodings, and layer normalization work together to create AI systems capable of understanding and generating human-like text and imagery.
           </p>
-          <a href="#" class="read-more"
-            >Read Full Article <i class="fas fa-arrow-right"></i
-          ></a>
+          <a href="articles/transformer-architecture.html" class="btn">Read Full Article</a>
         </div>
       </article>
     </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+      <h2>Browse Articles by Topic</h2>
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All Topics</button>
+        <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+        <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+        <button class="filter-btn" data-filter="nlp">NLP</button>
+        <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+        <button class="filter-btn" data-filter="ai-ethics">AI Ethics</button>
+      </div>
+    </section>
+
+    <!-- AI Articles Grid -->
+    <section id="machine-learning" class="articles-section">
+      <h2 class="section-title">Machine Learning</h2>
+      <div class="article-grid">
+        <!-- MLOps Article -->
+        <article class="article-card" data-category="machine-learning">
+          <div class="card-image">
+            <img src="images/mlops-pipeline.webp" alt="Diagram of MLOps workflow" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">MLOps</span>
+            <h3>Productionizing Machine Learning Models: A Complete MLOps Pipeline</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> William Oneka</span>
+              <span><i class="fas fa-calendar-alt"></i> May 8, 2025</span>
+              <span><i class="fas fa-clock"></i> 12 min read</span>
+            </div>
+            <p>
+              Learn how to build an end-to-end MLOps pipeline with Kubernetes, Kubeflow, and TensorFlow Extended (TFX) to automate training, validation, and deployment of ML models at scale. We'll cover feature stores, model monitoring, and versioning strategies.
+            </p>
+            <a href="articles/mlops-pipeline.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- AutoML Article -->
+        <article class="article-card" data-category="machine-learning">
+          <div class="card-image">
+            <img src="images/automl.webp" alt="AutoML workflow diagram" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">AutoML</span>
+            <h3>AutoML in 2025: When to Use it and When to Go Custom</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Sarah Chen, PhD</span>
+              <span><i class="fas fa-calendar-alt"></i> May 5, 2025</span>
+              <span><i class="fas fa-clock"></i> 10 min read</span>
+            </div>
+            <p>
+              Automated Machine Learning platforms have matured significantly, but they're not always the right choice. This guide helps you decide when to leverage AutoML solutions like Google Vertex AI, Amazon SageMaker Autopilot, or H2O.ai, and when custom model development is necessary.
+            </p>
+            <a href="articles/automl-guide.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Synthetic Data Article -->
+        <article class="article-card" data-category="machine-learning">
+          <div class="card-image">
+            <img src="images/synthetic-data.webp" alt="Synthetic data generation visualization" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Data Science</span>
+            <h3>Synthetic Data Generation: Solving ML's Data Problem</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Elena Rodriguez</span>
+              <span><i class="fas fa-calendar-alt"></i> May 2, 2025</span>
+              <span><i class="fas fa-clock"></i> 14 min read</span>
+            </div>
+            <p>
+              Privacy regulations and data scarcity are making synthetic data generation a critical component of the ML toolkit. This article explores techniques for creating high-quality synthetic datasets using GANs, diffusion models, and simulation-based approaches for tabular, text, and image data.
+            </p>
+            <a href="articles/synthetic-data.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="deep-learning" class="articles-section">
+      <h2 class="section-title">Deep Learning</h2>
+      <div class="article-grid">
+        <!-- LLM Fine-tuning Article -->
+        <article class="article-card" data-category="deep-learning">
+          <div class="card-image">
+            <img src="images/llm-fine-tuning.webp" alt="Neural network fine-tuning visualization" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Large Language Models</span>
+            <h3>Advanced Fine-Tuning Techniques for Large Language Models</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Sarah Chen, PhD</span>
+              <span><i class="fas fa-calendar-alt"></i> May 6, 2025</span>
+              <span><i class="fas fa-clock"></i> 15 min read</span>
+            </div>
+            <p>
+              Fine-tuning foundation models can dramatically improve their performance on domain-specific tasks. This guide explores advanced techniques including RLHF, DPO, LoRA, QLoRA, and quantization methods that optimize results while minimizing computational requirements.
+            </p>
+            <a href="articles/llm-fine-tuning.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Diffusion Models Article -->
+        <article class="article-card" data-category="deep-learning">
+          <div class="card-image">
+            <img src="images/diffusion-models.webp" alt="Diffusion model generation process" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Generative AI</span>
+            <h3>Understanding Diffusion Models: Theory and Implementation</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> William Oneka</span>
+              <span><i class="fas fa-calendar-alt"></i> April 30, 2025</span>
+              <span><i class="fas fa-clock"></i> 16 min read</span>
+            </div>
+            <p>
+              Diffusion models have revolutionized generative AI for images, video, and audio. This article explains the mathematical foundations of diffusion processes and provides a practical PyTorch implementation of a basic diffusion model, with code examples and optimization techniques.
+            </p>
+            <a href="articles/diffusion-models.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Optimization Article -->
+        <article class="article-card" data-category="deep-learning">
+          <div class="card-image">
+            <img src="images/model-optimization.webp" alt="Neural network optimization visualization" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Performance</span>
+            <h3>Deep Learning Optimization: From Theory to Implementation</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Sarah Chen, PhD</span>
+              <span><i class="fas fa-calendar-alt"></i> April 27, 2025</span>
+              <span><i class="fas fa-clock"></i> 13 min read</span>
+            </div>
+            <p>
+              Optimization algorithms are the engines that power deep learning. This comprehensive guide explores gradient descent variants, adaptive methods like Adam and AdamW, learning rate schedulers, and regularization techniques with PyTorch implementation examples.
+            </p>
+            <a href="articles/dl-optimization.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="computer-vision" class="articles-section">
+      <h2 class="section-title">Computer Vision</h2>
+      <div class="article-grid">
+        <!-- Object Detection Article -->
+        <article class="article-card" data-category="computer-vision">
+          <div class="card-image">
+            <img src="images/computer-vision.webp" alt="Camera detecting objects in real time" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Object Detection</span>
+            <h3>Real-Time Object Detection Systems: From YOLO to Edge Deployment</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Elena Rodriguez</span>
+              <span><i class="fas fa-calendar-alt"></i> May 4, 2025</span>
+              <span><i class="fas fa-clock"></i> 9 min read</span>
+            </div>
+            <p>
+              Implement YOLOv8 with TensorFlow Lite on edge devices for fast, real-time object detection. This hands-on tutorial covers model selection, optimization techniques like pruning and quantization, and deployment strategies for resource-constrained environments.
+            </p>
+            <a href="articles/real-time-object-detection.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- 3D Vision Article -->
+        <article class="article-card" data-category="computer-vision">
+          <div class="card-image">
+            <img src="images/3d-vision.webp" alt="3D reconstruction from images" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">3D Vision</span>
+            <h3>Neural Radiance Fields (NeRF): 3D Scene Reconstruction</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> William Oneka</span>
+              <span><i class="fas fa-calendar-alt"></i> April 29, 2025</span>
+              <span><i class="fas fa-clock"></i> 11 min read</span>
+            </div>
+            <p>
+              Neural Radiance Fields represent a breakthrough in 3D scene reconstruction from 2D images. This article explains the core concepts behind NeRF, demonstrates implementation using PyTorch, and explores recent advancements like Instant NGP and Mip-NeRF 360.
+            </p>
+            <a href="articles/nerf-reconstruction.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="nlp" class="articles-section">
+      <h2 class="section-title">Natural Language Processing</h2>
+      <div class="article-grid">
+        <!-- RAG Article -->
+        <article class="article-card" data-category="nlp">
+          <div class="card-image">
+            <img src="images/rag-systems.webp" alt="Retrieval Augmented Generation architecture" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">RAG</span>
+            <h3>Building Advanced RAG Systems: Beyond Basic Retrieval</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Sarah Chen, PhD</span>
+              <span><i class="fas fa-calendar-alt"></i> May 7, 2025</span>
+              <span><i class="fas fa-clock"></i> 14 min read</span>
+            </div>
+            <p>
+              Retrieval Augmented Generation has become essential for grounding LLMs in accurate, up-to-date information. This article explores advanced RAG architectures including multi-step retrieval, self-querying, and hybrid search with vector, keyword, and semantic filtering.
+            </p>
+            <a href="articles/advanced-rag.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- LLM Agents Article -->
+        <article class="article-card" data-category="nlp">
+          <div class="card-image">
+            <img src="images/llm-agents.webp" alt="AI agent architecture diagram" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Agents</span>
+            <h3>Autonomous AI Agents: Architecture and Implementation</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Elena Rodriguez</span>
+              <span><i class="fas fa-calendar-alt"></i> May 1, 2025</span>
+              <span><i class="fas fa-clock"></i> 17 min read</span>
+            </div>
+            <p>
+              LLM-powered agents can reason, plan, and execute complex tasks autonomously. This guide explains how to build AI agents with planning capabilities (like ReAct and ToT), tool use, memory systems, and self-evaluation loops using LangChain and Python.
+            </p>
+            <a href="articles/autonomous-agents.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ai-ethics" class="articles-section">
+      <h2 class="section-title">AI Ethics & Governance</h2>
+      <div class="article-grid">
+        <!-- AI Ethics Article -->
+        <article class="article-card" data-category="ai-ethics">
+          <div class="card-image">
+            <img src="images/ai-ethics.webp" alt="AI Ethics concept visualization" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Ethics</span>
+            <h3>Ethical AI: From Principles to Practice</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Marcus Johnson</span>
+              <span><i class="fas fa-calendar-alt"></i> May 9, 2025</span>
+              <span><i class="fas fa-clock"></i> 15 min read</span>
+            </div>
+            <p>
+              Implementing ethical AI frameworks requires more than good intentions. This article examines practical approaches to bias detection, model explainability, and ethical governance in production AI systems, with case studies from finance, healthcare, and criminal justice.
+            </p>
+            <a href="articles/ethical-ai-implementation.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- AI Regulation Article -->
+        <article class="article-card" data-category="ai-ethics">
+          <div class="card-image">
+            <img src="images/ai-regulation.webp" alt="AI regulation concept" loading="lazy" />
+          </div>
+          <div class="article-content">
+            <span class="category-tag ai">Regulation</span>
+            <h3>Navigating Global AI Regulations: A Developer's Guide</h3>
+            <div class="article-meta">
+              <span><i class="fas fa-user"></i> Marcus Johnson</span>
+              <span><i class="fas fa-calendar-alt"></i> April 25, 2025</span>
+              <span><i class="fas fa-clock"></i> 13 min read</span>
+            </div>
+            <p>
+              The regulatory landscape for AI is evolving rapidly across jurisdictions. This comprehensive guide helps developers and organizations understand key requirements of the EU AI Act, US AI regulatory frameworks, and global approaches to AI governance.
+            </p>
+            <a href="articles/ai-regulation-guide.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Resource Center -->
+    <section class="resource-center">
+      <h2>AI Resource Center</h2>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Learning Paths</h3>
+          <p>Structured learning resources for beginners to advanced practitioners in various AI disciplines.</p>
+          <a href="resources/ai-learning-paths.html" class="btn btn-secondary">Explore Paths</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Code Libraries</h3>
+          <p>Curated collection of essential frameworks, libraries, and tools for AI development.</p>
+          <a href="resources/ai-libraries.html" class="btn btn-secondary">View Libraries</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-download"></i>
+          </div>
+          <h3>Datasets</h3>
+          <p>High-quality datasets for training and benchmarking AI models across various domains.</p>
+          <a href="resources/ai-datasets.html" class="btn btn-secondary">Browse Datasets</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Research Papers</h3>
+          <p>Summaries and explanations of groundbreaking AI research papers in accessible language.</p>
+          <a href="resources/ai-papers.html" class="btn btn-secondary">Read Summaries</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h2>Stay Updated with AI Insights</h2>
+      <p>Subscribe to our newsletter to receive the latest AI articles, tutorials, and research summaries directly in your inbox.</p>
+      <form class="newsletter-form" action="/subscribe" method="POST">
+        <div class="form-group">
+          <label for="email" class="sr-only">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required aria-required="true" />
+          <button type="submit" class="btn">Subscribe</button>
+        </div>
+        <div class="form-consent">
+          <input type="checkbox" id="consent" name="consent" required aria-required="true" />
+          <label for="consent">I agree to receive emails from TechInsight and understand I can unsubscribe at any time.</label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>About TechInsight</h3>
+          <p>TechInsight provides in-depth analysis and practical guides on cybersecurity, artificial intelligence, and full-stack development for technology professionals.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-categories">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="cybersecurity.html">Cybersecurity</a></li>
+            <li><a href="ai.html">Artificial Intelligence</a></li>
+            <li><a href="fullstack.html">Full-Stack Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://twitter.com/techinsight" aria-label="Twitter" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/techinsight" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/techinsight" aria-label="GitHub" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechInsight. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/category-filter.js"></script>
 </body>
 </html>

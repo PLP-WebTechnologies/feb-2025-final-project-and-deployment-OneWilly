@@ -2,25 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about TechInsight, our mission to provide expert insights on cybersecurity, AI and full-stack development, and meet our team of tech professionals." />
   <title>About – TechInsight</title>
   <link rel="stylesheet" href="css/main.css" />
-  <script
-    src="https://kit.fontawesome.com/your-kit-code.js"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 
 <body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Theme Toggle -->
-  <button
-    id="theme-button"
-    class="theme-toggle"
-    aria-label="Toggle dark/light theme"
-  >
+  <button id="theme-button" class="theme-toggle" aria-label="Toggle dark/light theme">
     <i class="fas fa-moon"></i>
   </button>
 
@@ -28,7 +23,9 @@
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <h1>Tech<span>Insight</span></h1>
+        <a href="index.html" aria-label="TechInsight Homepage">
+          <h1>Tech<span>Insight</span></h1>
+        </a>
       </div>
 
       <nav class="nav" aria-label="Main navigation">
@@ -51,11 +48,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <button
-          class="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -64,25 +57,278 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="container">
-    <section class="about-section">
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
       <h1>About TechInsight</h1>
-      <p>
-        Welcome to TechInsight, your go-to blog for AI, Cybersecurity, and Full-Stack
-        Development. Our mission is to bring you the latest industry insights,
-        tutorials, and best practices to help you stay ahead in today’s rapidly
-        evolving tech landscape.
-      </p>
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
 
-      <h2>Author</h2>
-      <p>
-        William Oneka — Web Developer &amp; Tech Enthusiast. With a passion for
-        building scalable web applications and exploring emerging technologies,
-        William wrote TechInsight to share knowledge and foster community.
-      </p>
-    </section>
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <div class="about-layout">
+      <!-- Mission Section -->
+      <section class="about-section">
+        <h2>Our Mission</h2>
+        <div class="section-content">
+          <div class="mission-image">
+            <img src="images/tech-mission.jpg" alt="Technology innovation concept" loading="lazy" />
+          </div>
+          <div class="mission-text">
+            <p>
+              Welcome to TechInsight, your premier destination for expert analysis and practical guidance in the ever-evolving world of technology. Founded in 2023, our mission is to demystify complex technical concepts and provide actionable insights for professionals across the tech spectrum.
+            </p>
+            <p>
+              In an era where digital transformation is reshaping industries, staying informed isn't just an advantage—it's a necessity. TechInsight bridges the gap between cutting-edge innovation and practical implementation, offering content that's both technically rigorous and accessible.
+            </p>
+            <p>
+              Whether you're a cybersecurity specialist defending against evolving threats, an AI researcher pushing the boundaries of machine learning, or a full-stack developer building the applications of tomorrow, TechInsight provides the knowledge resources you need to excel in your field.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team Section -->
+      <section class="about-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <!-- Founder -->
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/william-oneka.jpg" alt="William Oneka" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>William Oneka</h3>
+              <p class="member-title">Founder & Lead Editor</p>
+              <p class="member-bio">
+                With over 15 years of experience in web development and cybersecurity, William founded TechInsight to share practical knowledge gained from working with Fortune 500 companies and tech startups. He holds an MSc in Computer Science and several industry certifications including CISSP and AWS Solutions Architect.
+              </p>
+              <div class="member-social">
+                <a href="https://twitter.com/williamoneka" aria-label="William's Twitter" target="_blank" rel="noopener">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/williamoneka" aria-label="William's LinkedIn" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/williamoneka" aria-label="William's GitHub" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Specialist -->
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/sarah-chen.jpg" alt="Sarah Chen" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Sarah Chen, PhD</h3>
+              <p class="member-title">AI Research Contributor</p>
+              <p class="member-bio">
+                Sarah is a machine learning researcher specializing in natural language processing and generative AI. With a PhD from Stanford University, she brings academic rigor and industry perspective from her work at leading AI research labs. Sarah translates complex AI concepts into actionable insights for practitioners.
+              </p>
+              <div class="member-social">
+                <a href="https://twitter.com/sarahchenai" aria-label="Sarah's Twitter" target="_blank" rel="noopener">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/sarahchenai" aria-label="Sarah's LinkedIn" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cybersecurity Expert -->
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/marcus-johnson.jpg" alt="Marcus Johnson" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Marcus Johnson</h3>
+              <p class="member-title">Cybersecurity Contributor</p>
+              <p class="member-bio">
+                Marcus is a veteran cybersecurity consultant with expertise in threat intelligence, incident response, and security architecture. Previously the CISO of a global financial institution, he now advises organizations on emerging threats and defensive strategies while sharing his insights through TechInsight.
+              </p>
+              <div class="member-social">
+                <a href="https://twitter.com/mjsecurity" aria-label="Marcus's Twitter" target="_blank" rel="noopener">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/marcusjohnsonsecurity" aria-label="Marcus's LinkedIn" target="_blank" rel="noopener">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full-Stack Developer -->
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/elena-rodriguez.jpg" alt="Elena Rodriguez" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Elena Rodriguez</h3>
+              <p class="member-title">Full-Stack Development Contributor</p>
+              <p class="member-bio">
+                Elena is a senior full-stack developer with expertise in modern web frameworks and cloud architecture. Having led engineering teams at several tech startups, she specializes in scalable application development, DevOps practices, and emerging web technologies.
+              </p>
+              <div class="member-social">
+                <a href="https://twitter.com/elenadev" aria-label="Elena's Twitter" target="_blank" rel="noopener">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/elenarodriguez" aria-label="Elena's GitHub" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Values -->
+      <section class="about-section">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3>Technical Accuracy</h3>
+            <p>We're committed to providing technically accurate information that professionals can rely on. Our content undergoes rigorous review to ensure it reflects current best practices and established principles.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Practical Innovation</h3>
+            <p>We focus on the intersection of innovation and practical application. Our content doesn't just explain what's new—it helps you understand how emerging technologies can solve real-world problems.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Community Focus</h3>
+            <p>We believe in the power of the tech community to drive positive change. We actively engage with our readers, feature community voices, and promote knowledge sharing across specializations.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-universal-access"></i>
+            </div>
+            <h3>Accessibility</h3>
+            <p>We're committed to making technical knowledge accessible to all. Our content is designed to be understandable regardless of background, and our platform adheres to web accessibility standards.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editorial Process -->
+      <section class="about-section">
+        <h2>Our Editorial Process</h2>
+        <div class="process-container">
+          <p>
+            At TechInsight, we maintain high standards for our content to ensure you receive reliable, actionable information. Our editorial process includes:
+          </p>
+          <ol class="process-list">
+            <li>
+              <strong>Expert Authorship</strong> — All content is written by professionals with demonstrated expertise in their fields. Our contributors have both academic credentials and practical industry experience.
+            </li>
+            <li>
+              <strong>Technical Review</strong> — Articles undergo peer review by other specialists to verify technical accuracy and ensure practical relevance.
+            </li>
+            <li>
+              <strong>Regular Updates</strong> — We revisit and update our content regularly to reflect changes in technology, best practices, and industry standards.
+            </li>
+            <li>
+              <strong>Ethical Guidelines</strong> — We maintain a clear separation between editorial content and any sponsored material, which is always clearly labeled.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="about-section cta-section">
+        <h2>Join Our Community</h2>
+        <p>We're always looking to connect with tech professionals and enthusiasts who share our passion for innovation and knowledge sharing.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn">Contact Us</a>
+          <a href="#newsletter" class="btn btn-secondary">Subscribe to Newsletter</a>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="newsletter">
+    <div class="newsletter-content">
+      <h2>Stay Updated with TechInsight</h2>
+      <p>Subscribe to our newsletter to receive the latest articles, tutorials, and insights directly in your inbox.</p>
+      <form class="newsletter-form" action="/subscribe" method="POST">
+        <div class="form-group">
+          <label for="email" class="sr-only">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required aria-required="true" />
+          <button type="submit" class="btn">Subscribe</button>
+        </div>
+        <div class="form-consent">
+          <input type="checkbox" id="consent" name="consent" required aria-required="true" />
+          <label for="consent">I agree to receive emails from TechInsight and understand I can unsubscribe at any time.</label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>About TechInsight</h3>
+          <p>TechInsight provides in-depth analysis and practical guides on cybersecurity, artificial intelligence, and full-stack development for technology professionals.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-categories">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="cybersecurity.html">Cybersecurity</a></li>
+            <li><a href="ai.html">Artificial Intelligence</a></li>
+            <li><a href="fullstack.html">Full-Stack Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://twitter.com/techinsight" aria-label="Twitter" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/techinsight" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/techinsight" aria-label="GitHub" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechInsight. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/theme.js"></script>
   <script src="js/main.js"></script>

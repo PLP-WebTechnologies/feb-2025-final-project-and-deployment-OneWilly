@@ -2,39 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechInsight offers expert analysis and insights on Cybersecurity, AI, and Full-Stack Development for tech professionals and enthusiasts." />
+  <meta name="keywords" content="cybersecurity, artificial intelligence, full-stack development, tech blog" />
   <title>TechInsight | Cybersecurity &amp; AI Blog</title>
   <link rel="stylesheet" href="css/main.css" />
-  <script
-    src="https://kit.fontawesome.com/your-kit-code.js"
-    crossorigin="anonymous"
-  ></script>
+  <!-- Replace with your actual Font Awesome kit code -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
-
 <body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <!-- Theme Toggle -->
-  <button
-    id="theme-button"
-    class="theme-toggle"
-    aria-label="Toggle dark/light theme"
-  >
+  <button id="theme-button" class="theme-toggle" aria-label="Toggle dark/light theme">
     <i class="fas fa-moon"></i>
   </button>
-
+  
   <!-- Header -->
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <h1>Tech<span>Insight</span></h1>
+        <a href="index.html" aria-label="TechInsight Homepage">
+          <h1>Tech<span>Insight</span></h1>
+        </a>
       </div>
-
       <nav class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-
           <!-- Articles dropdown -->
           <li class="dropdown">
             <a href="articles.html" aria-haspopup="true" aria-expanded="false">
@@ -46,16 +43,10 @@
               <li><a href="fullstack.html">Full-Stack</a></li>
             </ul>
           </li>
-
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-
-        <button
-          class="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -63,30 +54,280 @@
       </nav>
     </div>
   </header>
-
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-content">
       <h2>Securing the Digital Future</h2>
       <p>
         Explore expert insights and best practices in Cybersecurity, Artificial
-        Intelligence, and Full-Stack Development to stay ahead in today’s tech
+        Intelligence, and Full-Stack Development to stay ahead in today's tech
         landscape.
       </p>
       <a href="articles.html" class="btn">Explore Articles</a>
     </div>
   </section>
-
-  <!-- Featured Articles -->
-  <main class="container">
+  
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <!-- Featured Articles -->
     <section class="featured-articles">
       <h2>Latest in Cybersecurity</h2>
       <div class="article-grid">
-        <!-- Article cards… -->
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/zero-trust.jpg" alt="Zero Trust Architecture Diagram" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Cybersecurity</span>
+            <h3>Zero Trust Security: Beyond the Perimeter</h3>
+            <p>
+              The traditional castle-and-moat security model is obsolete in today's distributed work environment. Learn how Zero Trust frameworks are revolutionizing enterprise security.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> May 10, 2025</span>
+              <a href="articles/zero-trust-security.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/ransomware-protection.jpg" alt="Ransomware Protection Concept" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Cybersecurity</span>
+            <h3>Ransomware Defense: A Proactive Approach</h3>
+            <p>
+              With ransomware attacks increasing by 150% in 2024, organizations need comprehensive strategies beyond traditional backups. Discover advanced prevention techniques.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> May 3, 2025</span>
+              <a href="articles/ransomware-defense.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/cloud-security.jpg" alt="Cloud Security Architecture" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Cybersecurity</span>
+            <h3>Securing Multi-Cloud Environments</h3>
+            <p>
+              Managing security across AWS, Azure, and Google Cloud introduces unique challenges. This guide explores unified security policies and cloud security posture management.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> April 28, 2025</span>
+              <a href="articles/multi-cloud-security.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="section-footer">
+        <a href="cybersecurity.html" class="btn btn-secondary">View All Cybersecurity Articles</a>
+      </div>
+    </section>
+    
+    <!-- AI Section -->
+    <section class="featured-articles">
+      <h2>Trending in AI</h2>
+      <div class="article-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/llm-fine-tuning.jpg" alt="Neural Network Fine-tuning Visualization" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Artificial Intelligence</span>
+            <h3>Advanced Fine-Tuning Techniques for LLMs</h3>
+            <p>
+              Fine-tuning large language models can dramatically improve domain-specific performance. Explore RLHF, LoRA, and quantization methods that optimize results while minimizing costs.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> May 8, 2025</span>
+              <a href="articles/llm-fine-tuning.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/synthetic-data.jpg" alt="Synthetic Data Generation Process" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Artificial Intelligence</span>
+            <h3>Synthetic Data: Solving AI's Data Problem</h3>
+            <p>
+              Privacy regulations and data scarcity have made synthetic data generation critical for AI advancement. Learn how diffusion models are creating high-quality training data across industries.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> May 2, 2025</span>
+              <a href="articles/synthetic-data.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/ai-ethics.jpg" alt="AI Ethics Concept" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Artificial Intelligence</span>
+            <h3>Ethical AI: From Principles to Practice</h3>
+            <p>
+              Implementing ethical AI frameworks requires more than good intentions. This article examines practical approaches to bias detection, explainability, and governance in real-world AI systems.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> April 25, 2025</span>
+              <a href="articles/ethical-ai-implementation.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="section-footer">
+        <a href="ai.html" class="btn btn-secondary">View All AI Articles</a>
+      </div>
+    </section>
+    
+    <!-- Full-Stack Section -->
+    <section class="featured-articles">
+      <h2>Full-Stack Development Insights</h2>
+      <div class="article-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/web-components.jpg" alt="Web Components Architecture" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Full-Stack</span>
+            <h3>Web Components: The Building Blocks of Modern UIs</h3>
+            <p>
+              Framework-agnostic components are transforming frontend development. Discover how custom elements, shadow DOM, and HTML templates enable truly reusable and encapsulated UI components.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> May 12, 2025</span>
+              <a href="articles/web-components.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/serverless-architecture.jpg" alt="Serverless Architecture Diagram" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Full-Stack</span>
+            <h3>Serverless Architecture Patterns in 2025</h3>
+            <p>
+              Serverless computing continues to evolve, with new patterns emerging for complex applications. Explore event-driven architectures, state management solutions, and hybrid approaches.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> May 5, 2025</span>
+              <a href="articles/serverless-patterns.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="card-image">
+            <img src="images/api-security.jpg" alt="API Security Concept" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">Full-Stack</span>
+            <h3>Securing Modern APIs: Beyond Basic Auth</h3>
+            <p>
+              APIs are the backbone of modern applications, but they're also common attack vectors. Learn advanced techniques for API authentication, rate limiting, and runtime protection.
+            </p>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> April 30, 2025</span>
+              <a href="articles/api-security.html" class="read-more">Read More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="section-footer">
+        <a href="fullstack.html" class="btn btn-secondary">View All Full-Stack Articles</a>
+      </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Stay Updated with TechInsight</h2>
+        <p>Subscribe to our newsletter to receive the latest articles, tutorials, and insights directly in your inbox.</p>
+        <form class="newsletter-form" action="/subscribe" method="POST">
+          <div class="form-group">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required aria-required="true" />
+            <button type="submit" class="btn">Subscribe</button>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="consent" name="consent" required aria-required="true" />
+            <label for="consent">I agree to receive emails from TechInsight and understand I can unsubscribe at any time.</label>
+          </div>
+        </form>
       </div>
     </section>
   </main>
-
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>About TechInsight</h3>
+          <p>TechInsight provides in-depth analysis and practical guides on cybersecurity, artificial intelligence, and full-stack development for technology professionals.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-categories">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="cybersecurity.html">Cybersecurity</a></li>
+            <li><a href="ai.html">Artificial Intelligence</a></li>
+            <li><a href="fullstack.html">Full-Stack Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://twitter.com/techinsight" aria-label="Twitter" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/company/techinsight" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/techinsight" aria-label="GitHub" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechInsight. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
   <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
 </body>
