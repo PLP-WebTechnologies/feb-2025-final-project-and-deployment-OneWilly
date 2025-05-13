@@ -45,15 +45,36 @@ body {
   animation: gradientAnimation 15s ease infinite;
 }
 
-/* Define the keyframes for smooth transitions */
-@keyframes gradientAnimation {
-  0%   { background-position: 0%   50%; }
-  25%  { background-position: 50%  100%; }
-  50%  { background-position: 100% 50%; }
-  75%  { background-position: 50%  0%; }
-  100% { background-position: 0%   50%; }
+/* main.css - Consolidated Styles for TechInsight */
+
+/* ===== Simple Reset ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ===== Theme Variables ===== */
+:root {
+  --primary-color: #2A2A72;
+  --secondary-color: #00C9A7;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+  --dark-text: #e6e6e6;
+  --dark-bg: #1a1a2e;
+  --transition: all 0.3s ease;
+  --max-width: 1200px;
+  --gap: 1rem;
+}
+
+/* ===== Base Styles (Mobile-First) ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: var(--transition);
+}
 
 img {
   max-width: 100%;
@@ -76,7 +97,7 @@ a:hover {
   margin: 0 auto;
 }
 
-/* ===== 4. Header & Navbar ===== */
+/* ===== Header & Navbar ===== */
 .main-header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -85,12 +106,14 @@ a:hover {
   top: 0;
   z-index: 1000;
 }
+
 .main-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--gap) 0;
 }
+
 .main-header .logo h1 {
   font-size: 1.8rem;
 }
@@ -108,13 +131,14 @@ a:hover {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: var(--text-color);
+  transition: var(--transition);
 }
 .main-header nav ul li a:hover,
 .main-header nav ul li a.active {
   color: var(--primary-color);
 }
 
-/* Hamburger icon (hidden by default) */
+/* Hamburger menu (hidden by default) */
 .main-header .hamburger {
   display: none;
   flex-direction: column;
@@ -122,13 +146,29 @@ a:hover {
   gap: 5px;
 }
 .main-header .hamburger .bar {
-  width: 25px;
   height: 3px;
+  width: 25px;
   background-color: var(--text-color);
   transition: var(--transition);
 }
 
-/* ===== 5. Hero Section ===== */
+/* ===== Hero ===== */
+.hero {
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+  color: #fff;
+  text-align: center;
+}
+/* Ensure hero content is on top */
+.hero .hero-content h2,
+.hero .hero-content p,
+.hero .btn {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
@@ -156,13 +196,31 @@ a:hover {
   background: var(--primary-color);
 }
 
-/* ===== 6. Article Grid & Cards ===== */
+/* ===== Article Grid & Cards ===== */
+/* Give featured-articles section a solid background so headings remain legible */
+.featured-articles {
+  background: var(--bg-color);
+  padding: var(--gap) 0;
+}
+.featured-articles h2 {
+  font-size: 1.75rem;
+  color: var(--text-color);
+  margin-bottom: var(--gap);
+}
 .article-grid {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   margin: var(--gap) 0;
 }
+
+.article-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: var(--gap) 0;
+}
+
 .article-card {
   background: #fff;
   border-radius: 10px;
@@ -174,10 +232,12 @@ a:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
+
 .article-card img {
   width: 100%;
   display: block;
 }
+
 .article-content {
   padding: var(--gap);
 }
@@ -189,10 +249,10 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
-.cyber       { background: var(--primary-color); }
-.ai          { background: #FF6B6B; }
-.fullstack   { background: var(--secondary-color); }
-.category-tag { color: #fff; }
+.cyber { background: var(--primary-color); color: #fff; }
+.ai { background: #FF6B6B; color: #fff; }
+.fullstack { background: var(--secondary-color); color: #fff; }
+
 .article-content h3 {
   margin: 0.5rem 0;
 }
@@ -203,7 +263,7 @@ a:hover {
   font-weight: bold;
 }
 
-/* ===== 7. Responsive Overrides ===== */
+/* ===== Responsive Overrides ===== */
 
 /* ≥600px: two-column grid */
 @media screen and (min-width: 600px) {
@@ -223,7 +283,7 @@ a:hover {
   }
 }
 
-/* ≤600px: hamburger menu + mobile nav */
+/* ≤600px: hamburger menu */
 @media screen and (max-width: 600px) {
   .main-header nav ul {
     display: none;
