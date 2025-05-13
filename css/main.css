@@ -1,129 +1,40 @@
-/* ===== Header & Navbar ===== */
-.main-header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+:root {
+  /* breakpoints */
+  --bp-sm: 600px; 
+  --bp-md: 900px;
+  /* spacing */
+  --space-md: 1rem;
+  /* color palette */
+  --c-bg: #f8f9fa;
+  --c-text: #333;
+  --c-primary: #2A2A72;
+  --transition: 0.3s ease;
 }
-.main-header .container {
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+/* BEM-style nav */
+.nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--gap) 0;
 }
-.main-header .logo h1 {
-  font-size: 1.8rem;
-}
-.main-header .logo span {
-  color: var(--secondary-color);
-}
-
-/* Navbar links */
-.main-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: var(--gap);
-}
-/* Make each <li> position:relative to anchor its submenu */
-.main-header nav ul li {
-  position: relative;
-}
-.main-header nav ul li a {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: var(--text-color);
-}
-.main-header nav ul li a:hover,
-.main-header nav ul li a.active {
-  color: var(--primary-color);
-}
-
-/* ==== DROPDOWN MENU STYLES ==== */
-/* Hide submenu by default */
-.main-header nav ul li .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 0.25rem);
-  left: 0;
-  background: #fff;
-  list-style: none;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  min-width: 180px;
-  border-radius: 5px;
-  z-index: 1000;
-}
-/* Style submenu links */
-.main-header nav ul li .dropdown-menu li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: var(--text-color);
-  white-space: nowrap;
-}
-.main-header nav ul li .dropdown-menu li a:hover {
-  background: var(--bg-color);
-}
-
-/* Show dropdown on hover (desktop) */
-@media screen and (min-width: 600px) {
-  .main-header nav ul li.dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-/* ==== HAMBURGER + MOBILE DROPDOWN ==== */
-/* Hamburger hidden by default */
-.main-header .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-.main-header .hamburger .bar {
-  height: 3px;
-  width: 25px;
-  background-color: var(--text-color);
+.nav__link {
+  padding: var(--space-md);
+  color: var(--c-text);
   transition: var(--transition);
 }
+.nav__link:focus-visible {
+  outline: 3px dashed var(--c-primary);
+}
 
-@media screen and (max-width: 600px) {
-  /* Mobile: hide main links */
-  .main-header nav ul {
-    display: none;
-    flex-direction: column;
-    background: rgba(255,255,255,0.95);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  /* Show when nav has .responsive */
-  .main-header nav.responsive ul {
-    display: flex;
-  }
-  /* Show hamburger icon */
-  .main-header .hamburger {
-    display: flex;
-  }
-  /* Dropdown submenu on mobile: hidden by default */
-  .main-header nav.responsive ul li .dropdown-menu {
-    display: none;
-    position: static;
-    box-shadow: none;
-    background: none;
-    padding: 0;
-    margin-left: var(--gap);
-  }
-  /* When JS toggles .open on submenu */
-  .main-header nav.responsive ul li .dropdown-menu.open {
-    display: flex;
-    flex-direction: column;
-  }
-  /* Increase link padding in mobile menu */
-  .main-header nav.responsive ul li a {
-    padding: 1rem;
+/* responsive article grid */
+@media screen and (min-width: var(--bp-sm)) {
+  .article-grid { 
+    gap: var(--space-lg);
   }
 }
+
+/* and so on… */
