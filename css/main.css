@@ -1,51 +1,4 @@
-/* main.css – Full Consolidated Styles for TechInsight */
-
-/* ===== 1. Simple Reset ===== */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ===== 2. Theme Variables ===== */
-:root {
-  --primary-color: #2A2A72;
-  --secondary-color: #00C9A7;
-  --text-color: #333;
-  --bg-color: #f8f9fa;
-  --transition: all 0.3s ease;
-  --max-width: 1200px;
-  --gap: 1rem;
-}
-
-/* ===== 3. Base Styles (Mobile-First) ===== */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background: var(--bg-color);
-  transition: var(--transition);
-}
-
-/* Animated gradient background */
-body {
-  /* Fallback static color */
-  background: #2A2A72;
-
-  /* Animated gradient */
-  background: linear-gradient(-45deg,
-    #2A2A72,
-    #00C9A7,
-    #FF6B6B,
-    #1a1a2e
-  );
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-/* main.css - Consolidated Styles for TechInsight */
+/* main.css - Consolidated & Polished Styles for TechInsight */
 
 /* ===== Simple Reset ===== */
 *, *::before, *::after {
@@ -70,7 +23,9 @@ body {
 /* ===== Base Styles (Mobile-First) ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
   color: var(--text-color);
   background: var(--bg-color);
   transition: var(--transition);
@@ -89,6 +44,10 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -152,23 +111,7 @@ a:hover {
   transition: var(--transition);
 }
 
-/* ===== Hero ===== */
-.hero {
-  background-image: url('../images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 0;
-  color: #fff;
-  text-align: center;
-}
-/* Ensure hero content is on top */
-.hero .hero-content h2,
-.hero .hero-content p,
-.hero .btn {
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
+/* ===== Hero Section ===== */
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
@@ -191,34 +134,41 @@ a:hover {
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   transition: var(--transition);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 .hero .btn:hover {
   background: var(--primary-color);
 }
 
-/* ===== Article Grid & Cards ===== */
-/* Give featured-articles section a solid background so headings remain legible */
-.featured-articles {
-  background: var(--bg-color);
-  padding: var(--gap) 0;
-}
-.featured-articles h2 {
-  font-size: 1.75rem;
-  color: var(--text-color);
-  margin-bottom: var(--gap);
-}
-.article-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
-  margin: var(--gap) 0;
+/* ===== Section Padding ===== */
+section, main {
+  padding: 2rem 0;
 }
 
+/* ===== Typography for Headings ===== */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* ===== Article Grid & Cards ===== */
 .article-grid {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
-  margin: var(--gap) 0;
+  margin-top: 1rem;
 }
 
 .article-card {
@@ -235,7 +185,6 @@ a:hover {
 
 .article-card img {
   width: 100%;
-  display: block;
 }
 
 .article-content {
@@ -256,16 +205,13 @@ a:hover {
 .article-content h3 {
   margin: 0.5rem 0;
 }
-.article-content p {
-  margin-bottom: var(--gap);
-}
 .article-content .read-more {
   font-weight: bold;
 }
 
-/* ===== Responsive Overrides ===== */
+/* ===== Responsive Layout ===== */
 
-/* ≥600px: two-column grid */
+/* ≥600px: Two-column layout */
 @media screen and (min-width: 600px) {
   .article-grid {
     flex-direction: row;
@@ -276,24 +222,24 @@ a:hover {
   }
 }
 
-/* ≥900px: three-column grid */
+/* ≥900px: Three-column layout */
 @media screen and (min-width: 900px) {
   .article-card {
     flex: 1 1 calc(33.333% - var(--gap));
   }
 }
 
-/* ≤600px: hamburger menu */
+/* ≤600px: Responsive hamburger nav */
 @media screen and (max-width: 600px) {
   .main-header nav ul {
     display: none;
     flex-direction: column;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     position: absolute;
     top: 100%;
     right: 0;
     width: 200px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   .main-header nav.responsive ul {
     display: flex;
