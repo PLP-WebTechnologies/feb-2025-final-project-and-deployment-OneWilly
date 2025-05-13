@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>Articles – TechInsight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact TechInsight for inquiries, collaborations, or feedback on our tech articles and resources." />
+  <title>Contact Us – TechInsight</title>
   <link rel="stylesheet" href="css/main.css" />
-  <script
-    src="https://kit.fontawesome.com/your-kit-code.js"
-    crossorigin="anonymous"
-  ></script>
+  <!-- Replace with actual Font Awesome kit code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+  <!-- Preconnect to CDN for improved performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -21,14 +21,16 @@
     class="theme-toggle"
     aria-label="Toggle dark/light theme"
   >
-    <i class="fas fa-moon"></i>
+    <i class="fas fa-moon" aria-hidden="true"></i>
   </button>
 
   <!-- Header -->
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <h1>Tech<span>Insight</span></h1>
+        <a href="index.html" aria-label="TechInsight Home">
+          <h1>Tech<span>Insight</span></h1>
+        </a>
       </div>
 
       <nav class="nav" aria-label="Main navigation">
@@ -37,8 +39,8 @@
 
           <!-- Articles dropdown -->
           <li class="dropdown">
-            <a href="articles.html" aria-haspopup="true" aria-expanded="true">
-              Articles <i class="fas fa-caret-down"></i>
+            <a href="articles.html" aria-haspopup="true" aria-expanded="false">
+              Articles <i class="fas fa-caret-down" aria-hidden="true"></i>
             </a>
             <ul class="dropdown-menu" aria-label="submenu">
               <li><a href="cybersecurity.html">Cybersecurity</a></li>
@@ -48,13 +50,14 @@
           </li>
 
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
 
         <button
           class="hamburger"
           aria-label="Toggle menu"
           aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <span class="bar"></span>
           <span class="bar"></span>
@@ -64,60 +67,184 @@
     </div>
   </header>
 
-  <!-- Articles Overview -->
+  <!-- Contact Section -->
   <main class="container">
-    <section class="articles-overview">
-      <h1>All Articles</h1>
-      <div class="article-grid">
-        <!-- AI -->
-        <article class="article-card">
-          <div class="article-content">
-            <span class="category-tag ai">AI</span>
-            <h3>Artificial Intelligence</h3>
-            <p>
-              Dive into cutting-edge AI research, deep learning breakthroughs,
-              and practical implementations shaping the future of technology.
-            </p>
-            <a href="ai.html" class="read-more"
-              >Explore AI Articles <i class="fas fa-arrow-right"></i
-            ></a>
+    <section class="contact-section">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="section-intro">Have questions or want to collaborate? We'd love to hear from you. Fill out the form below or use one of our alternative contact methods.</p>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <h3>Our Location</h3>
+              <p>123 Tech Street<br>Innovation District<br>Nairobi, Kenya</p>
+            </div>
           </div>
-        </article>
-
-        <!-- Cybersecurity -->
-        <article class="article-card">
-          <div class="article-content">
-            <span class="category-tag cyber">Cybersecurity</span>
-            <h3>Cybersecurity</h3>
-            <p>
-              Learn best practices, threat analyses, and strategies to secure
-              networks, applications, and data in an increasingly connected world.
-            </p>
-            <a href="cybersecurity.html" class="read-more"
-              >Explore Cybersecurity Articles <i class="fas fa-arrow-right"></i
-            ></a>
+          
+          <div class="info-item">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p><a href="mailto:info@techinsight.com">info@techinsight.com</a></p>
+            </div>
           </div>
-        </article>
-
-        <!-- Full-Stack -->
-        <article class="article-card">
-          <div class="article-content">
-            <span class="category-tag fullstack">Full-Stack</span>
-            <h3>Full-Stack Development</h3>
-            <p>
-              From frontend frameworks to backend APIs and deployment pipelines,
-              master the art of building end-to-end web applications.
-            </p>
-            <a href="fullstack.html" class="read-more"
-              >Explore Full-Stack Articles <i class="fas fa-arrow-right"></i
-            ></a>
+          
+          <div class="info-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p><a href="tel:+254123456789">+254 123 456 789</a></p>
+            </div>
           </div>
-        </article>
+          
+          <div class="info-item">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 9am - 5pm<br>Saturday & Sunday: Closed</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <h2>Send Us a Message</h2>
+          <form id="contact-form" class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message" id="name-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message" id="email-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+              <span class="error-message" id="subject-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error-message" id="message-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to our newsletter</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
+          <div id="form-success" class="form-success hidden">
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+            <p>Your message has been sent successfully. We'll get back to you shortly!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="location-section">
+      <h2>Find Us</h2>
+      <div class="map-container">
+        <!-- Replace with actual map implementation -->
+        <div class="map-placeholder">
+          <p>Interactive map will be loaded here</p>
+          <p>123 Tech Street, Innovation District, Nairobi, Kenya</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How quickly can I expect a response?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We typically respond to all inquiries within 24-48 business hours. For urgent matters, please call our office directly.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I submit article ideas?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! We welcome article ideas and guest contributions. Please use the contact form and select "Article Submission" in the subject field.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you offer tech consulting services?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, our team provides specialized tech consulting services. Please contact us with details about your project for a customized quote.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <script src="js/theme.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Tech<span>Insight</span></h2>
+          <p>Your source for in-depth tech knowledge and insights.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechInsight. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
 </body>
 </html>
