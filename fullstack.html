@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>Full-Stack Engineering – TechInsight</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <script
-    src="https://kit.fontawesome.com/your-kit-code.js"
-    crossorigin="anonymous"
-  ></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full-Stack development articles, tutorials and best practices from TechInsight">
+  <title>Full-Stack Development – TechInsight</title>
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://kit.fontawesome.com">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Use the Font Awesome Kit with defer to improve load performance -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous" defer></script>
+  <!-- Open Graph tags for better social sharing -->
+  <meta property="og:title" content="Full-Stack Development – TechInsight">
+  <meta property="og:description" content="Full-Stack development articles, tutorials and best practices from TechInsight">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techinsight.example.com/fullstack.html">
 </head>
 
 <body>
   <!-- Theme Toggle -->
-  <button
-    id="theme-button"
-    class="theme-toggle"
-    aria-label="Toggle dark/light theme"
-  >
-    <i class="fas fa-moon"></i>
+  <button id="theme-button" class="theme-toggle" aria-label="Toggle dark/light theme">
+    <i class="fas fa-moon" aria-hidden="true"></i>
   </button>
+
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <h1>Tech<span>Insight</span></h1>
+        <a href="index.html" aria-label="TechInsight Home">
+          <h1>Tech<span>Insight</span></h1>
+        </a>
       </div>
 
       <nav class="nav" aria-label="Main navigation">
@@ -38,7 +43,7 @@
           <!-- Articles dropdown -->
           <li class="dropdown">
             <a href="articles.html" aria-haspopup="true" aria-expanded="false">
-              Articles <i class="fas fa-caret-down"></i>
+              Articles <i class="fas fa-caret-down" aria-hidden="true"></i>
             </a>
             <ul class="dropdown-menu" aria-label="submenu">
               <li><a href="cybersecurity.html">Cybersecurity</a></li>
@@ -51,11 +56,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <button
-          class="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -64,66 +65,294 @@
     </div>
   </header>
 
-  <!-- Category Hero -->
-  <section class="hero category-hero">
-    <div class="container hero-content">
-      <h2>Full-Stack Engineering</h2>
-      <p>Building scalable end-to-end solutions</p>
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <!-- Page Header with Search -->
+    <div class="category-header fullstack-header">
+      <div class="category-intro">
+        <h1>Full-Stack Development</h1>
+        <p>From frontend to backend: master modern web development with practical guides and in-depth tutorials</p>
+      </div>
+      <div class="article-search">
+        <form class="search-form" role="search">
+          <input type="search" placeholder="Search full-stack articles..." aria-label="Search full-stack articles">
+          <button type="submit" aria-label="Submit search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
     </div>
-  </section>
 
-  <!-- Full-Stack Articles -->
-  <main class="container">
-    <section class="article-grid">
-      <article class="article-card" data-category="architecture">
-        <img
-          src="images/microservices.webp"
-          alt="Diagram of microservices architecture"
-          loading="lazy"
-        />
-        <div class="article-content">
-          <span class="category-tag fullstack">Architecture</span>
-          <h3>Microservices Communication Patterns</h3>
-          <div class="article-meta">
-            <span><i class="fas fa-calendar-alt"></i> March 20, 2025</span>
-            <span><i class="fas fa-clock"></i> 11 min read</span>
-          </div>
-          <p>
-            Explore patterns such as gRPC, message queues, and HTTP APIs to
-            enable reliable, scalable communication between microservices.
-          </p>
-          <a href="#" class="read-more"
-            >Read Full Article <i class="fas fa-arrow-right"></i
-          ></a>
+    <!-- Featured Article -->
+    <section class="featured-article">
+      <article class="article-card featured">
+        <div class="article-image">
+          <img src="images/microservices-architecture.jpg" alt="Microservices architecture diagram showing service connections" loading="lazy">
         </div>
-      </article>
-
-      <article class="article-card" data-category="devops">
-        <img
-          src="images/ci-cd.webp"
-          alt="Diagram of CI/CD pipeline"
-          loading="lazy"
-        />
         <div class="article-content">
-          <span class="category-tag fullstack">DevOps</span>
-          <h3>Automated Deployment Strategies</h3>
-          <div class="article-meta">
-            <span><i class="fas fa-calendar-alt"></i> March 19, 2025</span>
-            <span><i class="fas fa-clock"></i> 7 min read</span>
-          </div>
+          <span class="category-tag fullstack">Full-Stack</span>
+          <span class="article-date">May 12, 2025</span>
+          <h2>Microservices vs. Monoliths: Choosing the Right Architecture for Your Project</h2>
           <p>
-            Implement robust CI/CD pipelines using GitHub Actions, Docker, and
-            Kubernetes to streamline testing and deployment.
+            An in-depth analysis of microservices and monolithic architectures, examining their strengths, weaknesses, and ideal use cases. Learn how to make the right architectural decision for your next project with our comprehensive decision framework.
           </p>
-          <a href="#" class="read-more"
-            >Read Full Article <i class="fas fa-arrow-right"></i
-          ></a>
+          <div class="article-meta">
+            <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Marcus Johnson</span>
+            <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 15 min read</span>
+          </div>
+          <a href="#" class="btn">Read Full Article</a>
         </div>
       </article>
     </section>
+
+    <!-- Technology Filter Tabs -->
+    <section class="filter-tabs">
+      <h2 class="visually-hidden">Filter Articles</h2>
+      <div class="tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="frontend">Frontend</button>
+        <button class="tab" data-filter="backend">Backend</button>
+        <button class="tab" data-filter="devops">DevOps</button>
+        <button class="tab" data-filter="database">Databases</button>
+      </div>
+    </section>
+
+    <!-- Article Grid -->
+    <section class="article-list">
+      <h2>Latest Full-Stack Articles</h2>
+      <div class="article-grid">
+        <!-- Article 1 -->
+        <article class="article-card" data-category="frontend">
+          <div class="article-image">
+            <img src="images/react-performance.jpg" alt="React component performance visualization" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag fullstack">Frontend</span>
+            <span class="article-date">May 9, 2025</span>
+            <h3>Advanced React Performance Optimization Techniques</h3>
+            <p>
+              Take your React applications to the next level with practical strategies for optimizing component rendering, state management, and bundle size.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Sophia Lee</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 12 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card" data-category="backend">
+          <div class="article-image">
+            <img src="images/node-js-api.jpg" alt="Node.js API endpoint design diagram" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag fullstack">Backend</span>
+            <span class="article-date">May 6, 2025</span>
+            <h3>Building Scalable RESTful APIs with Node.js and Express</h3>
+            <p>
+              A comprehensive guide to designing, building, and optimizing REST APIs that can handle millions of requests while maintaining performance and security.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Alex Rivera</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 14 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card" data-category="devops">
+          <div class="article-image">
+            <img src="images/ci-cd-pipeline.jpg" alt="CI/CD pipeline workflow diagram" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag fullstack">DevOps</span>
+            <span class="article-date">May 4, 2025</span>
+            <h3>Implementing Continuous Deployment for Web Applications</h3>
+            <p>
+              Step-by-step tutorial on setting up a robust CI/CD pipeline using GitHub Actions, Jenkins, and Docker for automatic testing and deployment.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Jamal Thompson</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 18 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card" data-category="database">
+          <div class="article-image">
+            <img src="images/mongodb-schema.jpg" alt="MongoDB schema design visualization" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag fullstack">Database</span>
+            <span class="article-date">May 1, 2025</span>
+            <h3>MongoDB Schema Design Patterns for Scalable Applications</h3>
+            <p>
+              Learn optimal MongoDB document schema design strategies to improve query performance, reduce data duplication, and handle complex relationships.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Nina Garcia</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 10 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card" data-category="frontend">
+          <div class="article-image">
+            <img src="images/tailwind-css.jpg" alt="Tailwind CSS design system components" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag fullstack">Frontend</span>
+            <span class="article-date">April 28, 2025</span>
+            <h3>Building a Design System with Tailwind CSS</h3>
+            <p>
+              How to create a consistent, maintainable design system using Tailwind CSS utility classes and component extraction techniques.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Ryan Park</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 9 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card" data-category="backend">
+          <div class="article-image">
+            <img src="images/graphql-api.jpg" alt="GraphQL API schema and resolvers diagram" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag fullstack">Backend</span>
+            <span class="article-date">April 25, 2025</span>
+            <h3>From REST to GraphQL: A Practical Migration Guide</h3>
+            <p>
+              A practical approach to migrating existing REST APIs to GraphQL while maintaining backward compatibility and avoiding common pitfalls.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Priya Sharma</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 16 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more">
+        <button class="btn" id="load-more-btn">Load More Articles</button>
+      </div>
+    </section>
+
+    <!-- Tutorial Series Section -->
+    <section class="tutorial-series">
+      <h2>Featured Tutorial Series</h2>
+      <div class="series-grid">
+        <!-- Series 1 -->
+        <div class="series-card">
+          <div class="series-image">
+            <img src="images/jamstack-series.jpg" alt="JAMstack architecture diagram" loading="lazy">
+          </div>
+          <div class="series-content">
+            <h3>JAMstack Fundamentals</h3>
+            <p>A complete 5-part guide to building modern, high-performance websites with the JAMstack architecture</p>
+            <div class="series-meta">
+              <span><i class="fas fa-layer-group" aria-hidden="true"></i> 5 Parts</span>
+              <span><i class="fas fa-chart-line" aria-hidden="true"></i> Beginner to Advanced</span>
+            </div>
+            <a href="#" class="btn">Start Series</a>
+          </div>
+        </div>
+
+        <!-- Series 2 -->
+        <div class="series-card">
+          <div class="series-image">
+            <img src="images/mern-stack.jpg" alt="MERN stack components visualization" loading="lazy">
+          </div>
+          <div class="series-content">
+            <h3>MERN Stack Masterclass</h3>
+            <p>Build a complete full-stack application from scratch using MongoDB, Express, React, and Node.js</p>
+            <div class="series-meta">
+              <span><i class="fas fa-layer-group" aria-hidden="true"></i> 8 Parts</span>
+              <span><i class="fas fa-chart-line" aria-hidden="true"></i> Intermediate</span>
+            </div>
+            <a href="#" class="btn">Start Series</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-content">
+        <h2>Stay Updated on Full-Stack Development</h2>
+        <p>Subscribe to our weekly newsletter for the latest frameworks, tools, and techniques</p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn">Subscribe</button>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="consent" required>
+            <label for="consent">I agree to receive emails about full-stack development and understand I can unsubscribe anytime</label>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <script src="js/theme.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Tech<span>Insight</span></h2>
+          <p>Empowering tech professionals with in-depth insights and practical knowledge</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html">Artificial Intelligence</a></li>
+              <li><a href="fullstack.html">Full-Stack Development</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechInsight. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

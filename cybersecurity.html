@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>CyberSecurity Essentials – TechInsight</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <script
-    src="https://kit.fontawesome.com/your-kit-code.js"
-    crossorigin="anonymous"
-  ></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest cybersecurity news, trends, and best practices from TechInsight">
+  <title>Cybersecurity Articles – TechInsight</title>
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://kit.fontawesome.com">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Use the Font Awesome Kit with defer to improve load performance -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous" defer></script>
+  <!-- Open Graph tags for better social sharing -->
+  <meta property="og:title" content="Cybersecurity Articles – TechInsight">
+  <meta property="og:description" content="Latest cybersecurity news, trends, and best practices from TechInsight">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techinsight.example.com/cybersecurity.html">
 </head>
 
 <body>
   <!-- Theme Toggle -->
-  <button
-    id="theme-button"
-    class="theme-toggle"
-    aria-label="Toggle dark/light theme"
-  >
-    <i class="fas fa-moon"></i>
+  <button id="theme-button" class="theme-toggle" aria-label="Toggle dark/light theme">
+    <i class="fas fa-moon" aria-hidden="true"></i>
   </button>
+
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <h1>Tech<span>Insight</span></h1>
+        <a href="index.html" aria-label="TechInsight Home">
+          <h1>Tech<span>Insight</span></h1>
+        </a>
       </div>
 
       <nav class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          
+
           <!-- Articles dropdown -->
           <li class="dropdown">
             <a href="articles.html" aria-haspopup="true" aria-expanded="false">
-              Articles <i class="fas fa-caret-down"></i>
+              Articles <i class="fas fa-caret-down" aria-hidden="true"></i>
             </a>
             <ul class="dropdown-menu" aria-label="submenu">
               <li><a href="cybersecurity.html" class="active">Cybersecurity</a></li>
@@ -46,16 +51,12 @@
               <li><a href="fullstack.html">Full-Stack</a></li>
             </ul>
           </li>
-          
+
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <button
-          class="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -64,68 +65,244 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero category-hero">
-    <div class="container hero-content">
-      <h2>CyberSecurity Essentials</h2>
-      <p>Protecting digital assets in modern infrastructure</p>
+  <!-- Main Content -->
+  <main id="main-content" class="container">
+    <!-- Page Header with Search -->
+    <div class="category-header cyber-header">
+      <div class="category-intro">
+        <h1>Cybersecurity</h1>
+        <p>Stay updated with the latest threats, vulnerabilities, and security best practices</p>
+      </div>
+      <div class="article-search">
+        <form class="search-form" role="search">
+          <input type="search" placeholder="Search cybersecurity articles..." aria-label="Search cybersecurity articles">
+          <button type="submit" aria-label="Submit search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
     </div>
-  </section>
 
-  <!-- Cybersecurity Articles -->
-  <main class="container">
-    <section class="article-grid">
-      <article class="article-card" data-category="network-security">
-        <img
-          src="images/network-security.webp"
-          alt="Network security diagram"
-          loading="lazy"
-        />
-        <div class="article-content">
-          <span class="category-tag cyber">Network Security</span>
-          <h3>Zero Trust Architecture Implementation</h3>
-          <div class="article-meta">
-            <span><i class="fas fa-calendar-alt"></i> March 15, 2025</span>
-            <span><i class="fas fa-clock"></i> 8 min read</span>
-          </div>
-          <p>
-            Explore how Zero Trust Architecture minimizes risk by enforcing
-            continuous verification, microsegmentation, and least-privilege
-            access in enterprise networks.
-          </p>
-          <a href="#" class="read-more"
-            >Read Full Article <i class="fas fa-arrow-right"></i
-          ></a>
+    <!-- Featured Article -->
+    <section class="featured-article">
+      <article class="article-card featured">
+        <div class="article-image">
+          <img src="images/zero-trust.jpg" alt="Zero Trust Security Architecture diagram showing network security layers" loading="lazy">
         </div>
-      </article>
-
-      <article class="article-card" data-category="encryption">
-        <img
-          src="images/encryption-methods.webp"
-          alt="Illustration of encryption algorithms"
-          loading="lazy"
-        />
         <div class="article-content">
-          <span class="category-tag cyber">Encryption</span>
-          <h3>Post-Quantum Cryptography Fundamentals</h3>
-          <div class="article-meta">
-            <span><i class="fas fa-calendar-alt"></i> March 12, 2025</span>
-            <span><i class="fas fa-clock"></i> 10 min read</span>
-          </div>
+          <span class="category-tag cyber">Cybersecurity</span>
+          <span class="article-date">May 10, 2025</span>
+          <h2>Zero Trust Architecture: Beyond Traditional Security Models</h2>
           <p>
-            Understand lattice-based and hash-based schemes that resist
-            quantum attacks, preparing your data for the next generation of
-            cryptographic security.
+            Explore how Zero Trust security models are revolutionizing enterprise security by removing implicit trust and continuously validating every stage of digital interactions. Learn implementation strategies, challenges, and real-world success stories.
           </p>
-          <a href="#" class="read-more"
-            >Read Full Article <i class="fas fa-arrow-right"></i
-          ></a>
+          <div class="article-meta">
+            <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Sarah Chen</span>
+            <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 12 min read</span>
+          </div>
+          <a href="#" class="btn">Read Full Article</a>
         </div>
       </article>
     </section>
+
+    <!-- Article Grid -->
+    <section class="article-list">
+      <h2>Latest Cybersecurity Articles</h2>
+      <div class="article-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/ransomware.jpg" alt="Laptop screen showing ransomware attack warning" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag cyber">Cybersecurity</span>
+            <span class="article-date">May 7, 2025</span>
+            <h3>Ransomware Evolution in 2025: New Trends and Defense Strategies</h3>
+            <p>
+              Analyzing the latest ransomware attack vectors and providing actionable defense strategies for organizations of all sizes.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Michael Torres</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 8 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/privacy-regulations.jpg" alt="Globe surrounded by privacy regulation acronyms" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag cyber">Cybersecurity</span>
+            <span class="article-date">May 5, 2025</span>
+            <h3>Global Privacy Regulations: Compliance Guide for Development Teams</h3>
+            <p>
+              Navigating GDPR, CCPA, LGPD and other privacy regulations with practical implementation tips for software developers.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Elena Rodriguez</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 10 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/secure-sdlc.jpg" alt="Secure software development lifecycle diagram" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag cyber">Cybersecurity</span>
+            <span class="article-date">May 2, 2025</span>
+            <h3>Implementing Secure Development Lifecycle for Modern Applications</h3>
+            <p>
+              Step-by-step guide to integrating security at every phase of the software development lifecycle to build more resilient applications.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> James Wilson</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 15 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/api-security.jpg" alt="API security shield concept" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag cyber">Cybersecurity</span>
+            <span class="article-date">April 28, 2025</span>
+            <h3>API Security: Protecting Your Application's Front Door</h3>
+            <p>
+              Essential techniques for securing APIs against common vulnerabilities including authentication flaws, injection attacks, and rate limiting bypasses.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Aisha Patel</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 9 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/threat-modeling.jpg" alt="Threat modeling workshop with sticky notes on wall" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag cyber">Cybersecurity</span>
+            <span class="article-date">April 25, 2025</span>
+            <h3>Practical Threat Modeling for Agile Teams</h3>
+            <p>
+              How to integrate lightweight threat modeling practices into fast-paced agile development without slowing down your sprint cycles.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> David Okafor</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 11 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/security-automation.jpg" alt="Security automation pipeline visualization" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="category-tag cyber">Cybersecurity</span>
+            <span class="article-date">April 22, 2025</span>
+            <h3>Security Automation: Building a Self-Defending Infrastructure</h3>
+            <p>
+              Leveraging automation to detect, respond to, and remediate security threats with minimal human intervention.
+            </p>
+            <div class="article-meta">
+              <span class="author"><i class="fas fa-user" aria-hidden="true"></i> Lisa Johnson</span>
+              <span class="read-time"><i class="fas fa-clock" aria-hidden="true"></i> 13 min read</span>
+            </div>
+            <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more">
+        <button class="btn" id="load-more-btn">Load More Articles</button>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-content">
+        <h2>Stay Updated on Cybersecurity Trends</h2>
+        <p>Subscribe to our weekly newsletter for the latest vulnerabilities, attack techniques, and defense strategies</p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn">Subscribe</button>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="consent" required>
+            <label for="consent">I agree to receive emails about cybersecurity content and understand I can unsubscribe anytime</label>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <script src="js/theme.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Tech<span>Insight</span></h2>
+          <p>Empowering tech professionals with in-depth insights and practical knowledge</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="ai.html">Artificial Intelligence</a></li>
+              <li><a href="fullstack.html">Full-Stack Development</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechInsight. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
